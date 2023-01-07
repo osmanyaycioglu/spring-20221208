@@ -1,4 +1,4 @@
-package com.training.spring.rest;
+package com.training.spring.di.rest;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
