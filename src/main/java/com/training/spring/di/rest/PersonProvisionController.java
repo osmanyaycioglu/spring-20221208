@@ -1,8 +1,9 @@
 package com.training.spring.di.rest;
 
-import com.training.spring.di.rest.error.ErrorObj;
+import com.training.spring.di.rest.models.Person;
+import com.training.spring.di.services.PersonProvisionService;
 import io.swagger.v3.oas.annotations.Operation;
-import org.springframework.http.HttpStatus;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -11,6 +12,13 @@ import javax.validation.Valid;
 @RequestMapping("/api/v1/person/provision")
 public class PersonProvisionController {
 
+    private PersonProvisionService personProvisionService;
+
+    @Autowired
+    public PersonProvisionController(PersonProvisionService personProvisionServiceParam) {
+        personProvisionService = personProvisionServiceParam;
+    }
+
     @Operation(summary = "yeni person ekle",
             description = "Şunu bunu girin verilen kişi database yazılır")
     @PostMapping("/add")
@@ -18,6 +26,7 @@ public class PersonProvisionController {
         if (personParam.getName() == null) {
             throw new IllegalArgumentException("name null olamaz");
         }
+        personProvisionService.addPerson(personParam);
         return "OK";
     }
 

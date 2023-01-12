@@ -1,6 +1,7 @@
 package com.training.spring.di.rest;
 
 import com.training.spring.di.IHello;
+import com.training.spring.di.rest.models.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;

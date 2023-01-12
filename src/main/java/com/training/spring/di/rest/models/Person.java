@@ -1,4 +1,4 @@
-package com.training.spring.di.rest;
+package com.training.spring.di.rest.models;
 
 import com.training.spring.di.rest.validation.Contains;
 import com.training.spring.di.rest.validation.ContainsObject;
