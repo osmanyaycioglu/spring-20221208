@@ -1,5 +1,6 @@
 package com.training.spring.di.rest;
 
+import com.training.spring.di.rest.mappers.IPersonMapper;
 import com.training.spring.di.rest.models.Person;
 import com.training.spring.di.services.PersonProvisionService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -26,7 +27,7 @@ public class PersonProvisionController {
         if (personParam.getName() == null) {
             throw new IllegalArgumentException("name null olamaz");
         }
-        personProvisionService.addPerson(personParam);
+        personProvisionService.addPerson(IPersonMapper.personMapper.toPersonDto(personParam));
         return "OK";
     }
 

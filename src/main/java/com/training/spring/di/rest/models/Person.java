@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 @Getter
@@ -38,5 +39,6 @@ public class Person {
     @Contains({"123","1234","abc","xyz","test","deneme"})
     private String password;
     private Integer xyz; // optional
-
+    @Valid
+    private Address address;
 }

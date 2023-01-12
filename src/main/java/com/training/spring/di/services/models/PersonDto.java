@@ -17,4 +17,5 @@ public class PersonDto {
     private Integer weight;
     private String secret;
     private EPersonStatus personStatus;
+    private AddressDto address;
 }
