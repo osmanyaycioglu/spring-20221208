@@ -2,6 +2,7 @@ package com.training.spring;
 
 import com.training.spring.di.Hello;
 import com.training.spring.di.IHello;
+import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,6 +11,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@EnableEncryptableProperties
 public class SpringProjectApplication implements ApplicationRunner {
 
     // field injections

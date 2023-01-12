@@ -1,0 +1,41 @@
+app:
+  lang:
+    hello: esp
+note:
+  desc1: VjPLdnUWQ0r440s6RKkmX3q/UsnLxQR/AcEVZYWsE+7s4wB1ODdnBxUnU/OMDWO/YkYLdDokY+v7Gy20e43eFZYxBZlArHJOghoWR5u6vW0=
+  desc2: SdDw3aaAJ/anKiM7z389AARC2ybi/hcrIQ90SEByJUvFDhwwLYbxi6HIt3RPChEZ
+  desc3: uD/2FykZpNkGK5tB++kg872/mS4griCit+zn+SlyCk/SZEj4aY3p3g8IuK3/0gEQ
+  intVal: 100
+  noteType:
+    type: type1
+    typeIndex: 3
+  strings:
+  - str1
+  - str2
+  - str3
+  noteTypeMap:
+    abc:
+      typeStr: type1
+      typeIndex: 1
+    xyz:
+      typeStr: type2
+      typeIndex: 2
+server:
+  error:
+    include-binding-errors: always
+    include-exception: true
+    include-message: always
+  port: 9090
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: ENC(uD/2FykZpNkGK5tB++kg872/mS4griCit+zn+SlyCk/SZEj4aY3p3g8IuK3/0gEQ)
+    url: ENC(VjPLdnUWQ0r440s6RKkmX3q/UsnLxQR/AcEVZYWsE+7s4wB1ODdnBxUnU/OMDWO/YkYLdDokY+v7Gy20e43eFZYxBZlArHJOghoWR5u6vW0=)
+    username: ENC(SdDw3aaAJ/anKiM7z389AARC2ybi/hcrIQ90SEByJUvFDhwwLYbxi6HIt3RPChEZ)
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
