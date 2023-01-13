@@ -42,6 +42,7 @@ public class ErrorAdvice {
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ErrorObj handleException(Exception exp) {
+        exp.printStackTrace();
         if (exp instanceof NullPointerException) {
             return ErrorObj.builder()
                            .withErrorDesc("error")

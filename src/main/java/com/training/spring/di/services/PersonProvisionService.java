@@ -2,8 +2,8 @@ package com.training.spring.di.services;
 
 import com.training.spring.di.data.PersonDbOperations;
 import com.training.spring.di.services.models.PersonDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class PersonProvisionService {
@@ -14,10 +14,12 @@ public class PersonProvisionService {
         personDbOperations = personDbOperationsParam;
     }
 
+    @Transactional
     public void addPerson(PersonDto personDtoParam) {
         // Rest call -> entegrasyon layer
         // Web service
-        personDbOperations.insert(personDtoParam);
+        personDbOperations.insertOrUpdate(personDtoParam);
+        personDbOperations.otherOperation(personDtoParam);
     }
 
 }

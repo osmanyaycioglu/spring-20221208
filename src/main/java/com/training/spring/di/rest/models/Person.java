@@ -8,6 +8,7 @@ import lombok.ToString;
 
 import javax.validation.Valid;
 import javax.validation.constraints.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -41,4 +42,6 @@ public class Person {
     private Integer xyz; // optional
     @Valid
     private Address address;
+
+    private List<Phone> phones;
 }
